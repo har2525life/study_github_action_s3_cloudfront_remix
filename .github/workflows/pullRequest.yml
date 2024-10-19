@@ -15,6 +15,7 @@ jobs:
 
             - name: Install dependencies
               run: npm install
+              working-directory: ./frontend
 
             - name: Run TypeScript compiler
               run: npm run tsc # または、直接 tsc コマンドを実行する
