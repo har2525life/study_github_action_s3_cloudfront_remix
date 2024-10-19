@@ -1,0 +1,5 @@
+runs:
+    using: "Composite"
+    steps:
+        - name: Install dependencies
+          run: npm run tsc

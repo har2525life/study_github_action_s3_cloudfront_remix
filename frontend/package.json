@@ -8,7 +8,7 @@
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "preview": "vite preview",
-    "typecheck": "tsc"
+    "tsc": "tsc"
   },
   "dependencies": {
     "@remix-run/node": "^2.13.1",
