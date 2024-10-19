@@ -19,3 +19,4 @@ jobs:
 
             - name: Run TypeScript compiler
               run: npm run tsc # または、直接 tsc コマンドを実行する
+              working-directory: ./frontend
