@@ -9,9 +9,14 @@ jobs:
               uses: actions/checkout@v2
 
             - name: Setup Node.js
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v4
               with:
-                  node-version: latest
+                  node-version: "20" # 使用するNode.jsのバージョンを指定
 
-            - name: Initialize & Tsc
-              uses: ./.github/workflows/actions/tsc
+            - name: Install dependencies
+              run: npm install
+              working-directory: ./frontend
+
+            - name: Run TypeScript compiler
+              run: npm run tsc # または、直接 tsc コマンドを実行する
+              working-directory: ./frontend
