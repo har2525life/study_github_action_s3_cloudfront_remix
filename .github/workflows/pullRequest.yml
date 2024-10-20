@@ -9,7 +9,7 @@ jobs:
               uses: actions/checkout@v2
 
             - name: Setup Node.js
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v4 # このあたりでエラーが出るとバージョンを上げないといけない
               with:
                   node-version: "20" # 使用するNode.jsのバージョンを指定
 
@@ -19,4 +19,8 @@ jobs:
 
             - name: Run TypeScript compiler
               run: npm run tsc # または、直接 tsc コマンドを実行する
+              working-directory: ./frontend
+
+            - name: Run Biome checks
+              run: npx biome check
               working-directory: ./frontend
